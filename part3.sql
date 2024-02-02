@@ -10,3 +10,24 @@ FROM pokemons
 INNER JOIN types
 ON pokemons.secondary_type=types.id
 WHERE pokemons.name = 'Rufflet';
+
+--3:
+SELECT pokemons.name AS 'Pokemon Names'
+FROM pokemons
+LEFT JOIN pokemon_trainer
+ON pokemons.id=pokemon_trainer.pokemon_id
+WHERE pokemon_trainer.trainerID = 303;
+
+--4:
+SELECT COUNT(pokemons.secondary_type) AS 'Pokemon with Secondary Type Poison'
+FROM pokemons
+INNER JOIN types
+ON pokemons.secondary_type=types.id
+WHERE types.name = 'Poison';
+
+-- Or one could use this query; getting the info by using the id of the secondary type instead:
+SELECT COUNT(pokemons.secondary_type) AS 'Pokemon with Secondary Type Poison'
+FROM pokemons
+INNER JOIN types
+ON pokemons.secondary_type=types.id
+WHERE types.id = 7;
