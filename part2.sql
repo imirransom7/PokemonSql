@@ -11,11 +11,11 @@ WHERE id = 45;
 SELECT COUNT(*)
 FROM pokemons;
 
--- 4
+-- 4:
 SELECT COUNT(*)
 FROM types;
 
---5
+--5:
 SELECT COUNT(secondary_type)
 FROM pokemons;
 
