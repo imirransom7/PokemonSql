@@ -1,3 +1,6 @@
+### THIS REPO IS A COPY OF AN ALREADY EXISTING REPO:
+https://github.com/ZCW-J92D42/PokemonSqlLab
+
 # MySQL Pokemon Report Queries
 
 ### Goals
@@ -12,9 +15,6 @@ Directions:
 
 * In DataGrip, [connect to your local mysql instance](https://www.jetbrains.com/help/idea/connecting-to-a-database.html#mysql)
 ** (for those not using DataGrip, you can execute the files in the command line, using the following syntax: ```mysql -u your_mysql_user -p the_name_of_your_db < the_name_of_the_file.sql```)
-### THIS REPO IS A COPY OF AN ALREADY EXISTING REPO:
-https://github.com/ZCW-J92D42/PokemonSqlLab
-
 
 * Create your pokemon schema
 * Unpack the pokemon_sql.zip files
