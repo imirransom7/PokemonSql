@@ -31,3 +31,11 @@ FROM pokemons
 INNER JOIN types
 ON pokemons.secondary_type=types.id
 WHERE types.id = 7;
+
+--5:
+SELECT COUNT(pokemons.id) AS 'Number of Pokemon', types.name AS 'Primary Types'
+FROM pokemons
+INNER JOIN types
+ON pokemons.primary_type=types.id
+GROUP BY primary_type
+ORDER BY 'Number of Pokemon' DESC;
