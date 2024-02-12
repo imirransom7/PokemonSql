@@ -40,10 +40,16 @@ ON pokemons.primary_type=types.id
 GROUP BY primary_type
 ORDER BY 'Number of Pokemon' DESC;
 
----6:
+--6:
 SELECT COUNT(pokemons.id) AS 'Number of Pokemon', pokemon_trainer.trainerID AS Trainer
 FROM pokemons
 LEFT JOIN pokemon_trainer
 ON pokemons.id=pokemon_trainer.pokemon_id
 WHERE pokemon_trainer.pokelevel = 100
 GROUP BY Trainer;
+
+--7:
+SELECT COUNT(pokemon_id) AS 'Number of Pokemon', trainerID
+FROM pokemon_trainer
+GROUP BY trainerId
+HAVING Count(trainerID) = 1;
